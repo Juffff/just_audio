@@ -1371,13 +1371,13 @@ class AudioPlayer {
         if (checkInterruption()) return platform;
         await platform.setSpeed(SetSpeedRequest(speed: speed));
         if (checkInterruption()) return platform;
-        try {
-          await platform.setPitch(SetPitchRequest(pitch: pitch));
-        } catch (e) {
-          debugPrint("setPitch in JustAutio cause the error.");
-          // setPitch not supported on this platform.
-        }
-        if (checkInterruption()) return platform;
+        // try {
+        //   await platform.setPitch(SetPitchRequest(pitch: pitch));
+        // } catch (e) {
+        //   debugPrint("setPitch in JustAutio cause the error.");
+        //   // setPitch not supported on this platform.
+        // }
+        // if (checkInterruption()) return platform;
         try {
           await platform.setSkipSilence(SetSkipSilenceRequest(enabled: skipSilenceEnabled));
         } catch (e) {
